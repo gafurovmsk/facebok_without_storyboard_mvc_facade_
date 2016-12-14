@@ -11,13 +11,52 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-  var window: UIWindow?
+  var window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+  
+    
+    let feedFacebookCollectionView = FeedFacebookCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout() /*, someHandlerFunction()*/)
+    
+    
+    // здесь мы можем передавать функции или другие объекты если они нужны 
+    // при инициализации feedfacebookcollectionvie
+    
+    let navigationController = UINavigationController(rootViewController: feedFacebookCollectionView)
+    
+    window?.rootViewController = navigationController
+    window?.makeKeyAndVisible()
+    
+    
+    // some changes of nav bar
+    
+   // UINavigationBar.appearance().tintColor = UIColor(red: 51/255, green: 90/255, blue: 149/255, alpha: 1)
+    
+    UINavigationBar.appearance().barTintColor = UIColor.rgb(red: 51, green: 90, blue: 149)
+    UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+    
+    application.statusBarStyle = .lightContent
+    
+    
+  
     return true
   }
+  
+  // func someHandlerFunction () -> AnyObject
+  
+  // здесь мы можем устанавливать например Connection
+  // или инициализировать синглтон вещи (скорее всего)
+  // и возвращать
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
   func applicationWillResignActive(_ application: UIApplication) {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
