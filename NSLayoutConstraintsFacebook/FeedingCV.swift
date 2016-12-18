@@ -19,6 +19,10 @@ extension FacebookCollectionViewController {
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
   let feedCell = collectionView.dequeueReusableCell(withReuseIdentifier: newsCell, for: indexPath) as? FacebookFeedCVCell
     
+    
+    // лучше здесь передавать только одну ссылку на объект Post для ячейки
+    // тогда  в didSet можно установить все эти объекты ниже
+    
     let post = listOfPosts[indexPath.row]
     
     feedCell?.dateAndLocationLabel = PostLabel(user: post.userName)

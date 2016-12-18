@@ -64,7 +64,7 @@ class FacebookFeedCVCell: UICollectionViewCell {
     
     button.setTitle(title, for: .normal)
     button.setTitleColor(UIColor.rgb(red: 143, green: 150, blue: 145),for: .normal)
-    button.titleLabel?.textAlignment = .left
+  //  button.titleLabel?.textAlignment = .left
     button.setImage(UIImage(named:image), for: .normal)
     button.imageView?.backgroundColor = UIColor.white
     button.imageView?.contentMode = .scaleAspectFit
@@ -78,30 +78,7 @@ class FacebookFeedCVCell: UICollectionViewCell {
   
   
   
-  
-  
-  
-  
-  init(frame: CGRect, post: Post) {
-    
-    
-    
-    messageLabel = PostMessage(message: post.postMessage)
-    
-    dateAndLocationLabel = PostLabel(user: post.userName)
-    
-    profileImageView = PostImages(image: post.userImage ,mask:false)
-    
-    postImageView = PostImages(image: post.postImage, mask: true)
-    
-    likesComentsLabel = CommentsLine(likesCount: post.likesCount, commentsCount: post.commentsCount)
-    
-    
-    
-    super.init(frame:frame)
-   // setupViews()
-  }
-  
+
   public func setupViews(){
     
     backgroundColor = UIColor.white
