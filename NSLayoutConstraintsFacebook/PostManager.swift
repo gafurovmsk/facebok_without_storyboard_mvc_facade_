@@ -14,12 +14,12 @@ class PostManager: NSObject {
   
   override init() {
     
-    // defining Posts. couldbe parsed or any other type of def
-    // possibly downloaded by httpclient
+    // defining Posts. could be parsed or any other type of def
+    // possible to download by httpclient
     
     let post0 = Post(user: "Mark Zuckerberg",
                      andUserImage: UIImage(named:"zuckerberg")!,
-                     postMessage: "meanwhile someone get his sunbath! Cool",
+                     postMessage: "meanwhile someone sunning on the beach! Cool",
                      postImage: UIImage(named:"beach_girl")!,
                      likes: 135,
                      comments: 695)
@@ -33,7 +33,7 @@ class PostManager: NSObject {
     
     let post2 = Post(user: "Mark Zuckerberg",
                      andUserImage: UIImage(named:"zuckerberg")!,
-                     postMessage: "meanwhile someone get his sunbath! Cool",
+                     postMessage: "meanwhile someone sunning on the beach! Cool",
                      postImage: UIImage(named:"beach_girl")!,
                      likes: 4123,
                      comments: 1299)

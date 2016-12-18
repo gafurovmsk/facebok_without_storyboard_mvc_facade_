@@ -17,13 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
   
     
-    let feedFacebookCollectionView = FeedFacebookCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout() /*, someHandlerFunction()*/)
+    let facebookCollectionView = FacebookCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout() /*, someHandlerFunction()*/)
     
     
     // здесь мы можем передавать функции или другие объекты если они нужны 
     // при инициализации feedfacebookcollectionvie
     
-    let navigationController = UINavigationController(rootViewController: feedFacebookCollectionView)
+    let navigationController = UINavigationController(rootViewController: facebookCollectionView)
     
     window?.rootViewController = navigationController
     window?.makeKeyAndVisible()
@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   // func someHandlerFunction () -> AnyObject
   
   // здесь мы можем устанавливать например Connection
-  // или инициализировать синглтон вещи (скорее всего)
+  // или инициализировать синглтон вещи ()
   // и возвращать
   
   

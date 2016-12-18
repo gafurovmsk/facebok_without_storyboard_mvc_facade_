@@ -10,21 +10,26 @@ import Foundation
 import UIKit
 
 
-extension FeedFacebookCollectionViewController {
+extension FacebookCollectionViewController {
   
   override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 4
+    return listOfPosts.count
   }
   
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    return collectionView.dequeueReusableCell(withReuseIdentifier: newsCell, for: indexPath)
+    let feedCell = collectionView.dequeueReusableCell(withReuseIdentifier: newsCell, for: indexPath) as! FacebookFeedCVCell
+    
+// как бл соединить в этом месте сел с моделью
+  
+    
+    return feedCell
   }
   
 }
 
 
 
-extension FeedFacebookCollectionViewController: UICollectionViewDelegateFlowLayout {
+extension FacebookCollectionViewController: UICollectionViewDelegateFlowLayout {
 
 
   

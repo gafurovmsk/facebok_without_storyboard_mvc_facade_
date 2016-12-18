@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1859BD8F1DFAE19100CB7996 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859BD8E1DFAE19100CB7996 /* AppDelegate.swift */; };
-		1859BD911DFAE19100CB7996 /* FeedFacebookCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859BD901DFAE19100CB7996 /* FeedFacebookCollectionViewController.swift */; };
+		1859BD911DFAE19100CB7996 /* FacebookCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859BD901DFAE19100CB7996 /* FacebookCollectionViewController.swift */; };
 		1859BD961DFAE19200CB7996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1859BD951DFAE19200CB7996 /* Assets.xcassets */; };
 		1859BD991DFAE19200CB7996 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1859BD971DFAE19200CB7996 /* LaunchScreen.storyboard */; };
-		1859BDA11DFAEAE900CB7996 /* FacebookCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859BDA01DFAEAE900CB7996 /* FacebookCellCollectionViewCell.swift */; };
-		1859BDA31DFAED1E00CB7996 /* FeedFacebookFeeding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859BDA21DFAED1E00CB7996 /* FeedFacebookFeeding.swift */; };
+		1859BDA11DFAEAE900CB7996 /* FacebookFeedCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859BDA01DFAEAE900CB7996 /* FacebookFeedCVCell.swift */; };
+		1859BDA31DFAED1E00CB7996 /* FeedingCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859BDA21DFAED1E00CB7996 /* FeedingCV.swift */; };
 		1874F30B1E011BC200680370 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874F30A1E011BC200680370 /* HTTPClient.swift */; };
 		1874F30D1E011DA400680370 /* DataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874F30C1E011DA400680370 /* DataAPI.swift */; };
 		18A6EF3D1DFF266A00151134 /* PostLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6EF3C1DFF266A00151134 /* PostLabel.swift */; };
@@ -29,12 +29,12 @@
 /* Begin PBXFileReference section */
 		1859BD8B1DFAE19100CB7996 /* NSLayoutConstraintsFacebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSLayoutConstraintsFacebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1859BD8E1DFAE19100CB7996 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1859BD901DFAE19100CB7996 /* FeedFacebookCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFacebookCollectionViewController.swift; sourceTree = "<group>"; };
+		1859BD901DFAE19100CB7996 /* FacebookCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookCollectionViewController.swift; sourceTree = "<group>"; };
 		1859BD951DFAE19200CB7996 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1859BD981DFAE19200CB7996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1859BD9A1DFAE19200CB7996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1859BDA01DFAEAE900CB7996 /* FacebookCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookCellCollectionViewCell.swift; sourceTree = "<group>"; };
-		1859BDA21DFAED1E00CB7996 /* FeedFacebookFeeding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedFacebookFeeding.swift; sourceTree = "<group>"; };
+		1859BDA01DFAEAE900CB7996 /* FacebookFeedCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookFeedCVCell.swift; sourceTree = "<group>"; };
+		1859BDA21DFAED1E00CB7996 /* FeedingCV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedingCV.swift; sourceTree = "<group>"; };
 		1874F30A1E011BC200680370 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		1874F30C1E011DA400680370 /* DataAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAPI.swift; sourceTree = "<group>"; };
 		18A6EF3C1DFF266A00151134 /* PostLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostLabel.swift; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		18A6EF391DFEE8CB00151134 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1859BDA01DFAEAE900CB7996 /* FacebookCellCollectionViewCell.swift */,
+				1859BDA01DFAEAE900CB7996 /* FacebookFeedCVCell.swift */,
 				18A6EF421DFFE6F200151134 /* reusableButtons.swift */,
 			);
 			name = View;
@@ -106,8 +106,8 @@
 				18A6EF461E000BFA00151134 /* PostImages.swift */,
 				18A6EF4A1E00106400151134 /* PostMessage.swift */,
 				18A6EF3C1DFF266A00151134 /* PostLabel.swift */,
-				1859BD901DFAE19100CB7996 /* FeedFacebookCollectionViewController.swift */,
-				1859BDA21DFAED1E00CB7996 /* FeedFacebookFeeding.swift */,
+				1859BD901DFAE19100CB7996 /* FacebookCollectionViewController.swift */,
+				1859BDA21DFAED1E00CB7996 /* FeedingCV.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -215,13 +215,13 @@
 				18A6EF4B1E00106400151134 /* PostMessage.swift in Sources */,
 				1874F30D1E011DA400680370 /* DataAPI.swift in Sources */,
 				18A6EF3D1DFF266A00151134 /* PostLabel.swift in Sources */,
-				1859BDA11DFAEAE900CB7996 /* FacebookCellCollectionViewCell.swift in Sources */,
+				1859BDA11DFAEAE900CB7996 /* FacebookFeedCVCell.swift in Sources */,
 				18A6EF4D1E0014B300151134 /* CommentsLine.swift in Sources */,
 				18A6EF511E01130800151134 /* Post.swift in Sources */,
 				18A6EF431DFFE6F200151134 /* reusableButtons.swift in Sources */,
 				18A6EF471E000BFA00151134 /* PostImages.swift in Sources */,
-				1859BDA31DFAED1E00CB7996 /* FeedFacebookFeeding.swift in Sources */,
-				1859BD911DFAE19100CB7996 /* FeedFacebookCollectionViewController.swift in Sources */,
+				1859BDA31DFAED1E00CB7996 /* FeedingCV.swift in Sources */,
+				1859BD911DFAE19100CB7996 /* FacebookCollectionViewController.swift in Sources */,
 				18A6EF3F1DFFD47A00151134 /* UIColorExtenstion.swift in Sources */,
 				1874F30B1E011BC200680370 /* HTTPClient.swift in Sources */,
 				18A6EF451E00035F00151134 /* PostManager.swift in Sources */,

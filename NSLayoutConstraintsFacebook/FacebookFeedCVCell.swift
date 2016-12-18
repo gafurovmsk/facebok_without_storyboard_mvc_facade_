@@ -1,5 +1,5 @@
 //
-//  FacebookNewsCollectionViewCell.swift
+//  FacebookFeedCVCell.swift
 //  NSLayoutConstraintsFacebook
 //
 //  Created by Nik on 09.12.16.
@@ -8,38 +8,22 @@
 
 import UIKit
 
-class FacebookNewsCollectionViewCell: UICollectionViewCell {
-  
-  override init(frame: CGRect) {
-    
-    statusMessage = "meanwhile someone get his sunbath! Cool"
-    
-    messageLabel = PostMessage(message: statusMessage)
-    
-    super.init(frame: frame)
-    setupViews()
-  }
-  
-  required init?(coder aDecoder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
-  
+class FacebookFeedCVCell: UICollectionViewCell {
   
   // хотя в принципе вместо отдельного файла мы можем
   // определеить элементы вью в клоужерах
 
+  let dateAndLocationLabel:UILabel
   
-  let dateAndLocationLabel:UILabel = PostLabel()
-  
-  let profileImageView = PostImages(image: "zuckerberg",mask:false)
+  let profileImageView : PostImages
   
   let statusMessage: String
   
   let messageLabel: UITextView
   
-  let postImageView = PostImages(image: "beach_girl", mask: true)
+  let postImageView: PostImages
   
-  let likesComentsLabel: UILabel = CommentsLine(likesCount: 488, commentsCount: 1239)
+  let likesComentsLabel: CommentsLine
   
   let deviderLineView: UIView = {
     
@@ -52,12 +36,44 @@ class FacebookNewsCollectionViewCell: UICollectionViewCell {
   }()
   
   
+  
+  
+  
+  override init(frame: CGRect) {
+    
+    statusMessage = "meanwhile someone sunning on the beach! Cool"
+    
+    messageLabel = PostMessage(message: statusMessage)
+    
+    dateAndLocationLabel = PostLabel()
+    
+    profileImageView = PostImages(image: "zuckerberg",mask:false)
+    
+    postImageView = PostImages(image: "beach_girl", mask: true)
+    
+    likesComentsLabel = CommentsLine(likesCount: 488, commentsCount: 1239)
+    
+    
+    
+    
+    super.init(frame: frame)
+    setupViews()
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
+  
+  
+  
+  
   // buttons smells
-  let likeButton = FacebookNewsCollectionViewCell.buttonFor(title: "Like!", andImage: "like")
+  let likeButton = FacebookFeedCVCell.buttonFor(title: "Like!", andImage: "like")
   
-  let commentButton = FacebookNewsCollectionViewCell.buttonFor(title: "Comment", andImage: "comment")
+  let commentButton = FacebookFeedCVCell.buttonFor(title: "Comment", andImage: "comment")
   
-  let shareButton = FacebookNewsCollectionViewCell.buttonFor(title: "Share", andImage: "share")
+  let shareButton = FacebookFeedCVCell.buttonFor(title: "Share", andImage: "share")
   
   static func buttonFor(title: String, andImage image: String) -> UIButton {
     

@@ -1,5 +1,5 @@
 //
-//  FeedFacebookCollectionViewController.swift
+//  FacebookCollectionViewController.swift
 //  NSLayoutConstraintsFacebook
 //
 //  Created by Nik on 09.12.16.
@@ -8,7 +8,10 @@
 
 import UIKit
 
-class FeedFacebookCollectionViewController: UICollectionViewController {
+class FacebookCollectionViewController: UICollectionViewController {
+  
+  var listOfPosts = [Post]()
+  // could be a private, but extension in another file
   
   let newsCell = "newsCell"
   
@@ -22,9 +25,13 @@ class FeedFacebookCollectionViewController: UICollectionViewController {
     
     collectionView?.backgroundColor = UIColor(white: 0.95, alpha: 1)
     
-    collectionView?.register(FacebookNewsCollectionViewCell.self, forCellWithReuseIdentifier: newsCell)
+    collectionView?.register(FacebookFeedCVCell.self, forCellWithReuseIdentifier: newsCell)
     
     collectionView?.alwaysBounceVertical = true
+    
+    
+    // getting posts
+    listOfPosts = DataAPI.sharedInstance.getPosts()
     
     
   }
