@@ -17,13 +17,20 @@ extension FacebookCollectionViewController {
   }
   
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let feedCell = collectionView.dequeueReusableCell(withReuseIdentifier: newsCell, for: indexPath) as! FacebookFeedCVCell
+  let feedCell = collectionView.dequeueReusableCell(withReuseIdentifier: newsCell, for: indexPath) as? FacebookFeedCVCell
     
-// как бл соединить в этом месте сел с моделью
-  
+    let post = listOfPosts[indexPath.row]
     
-    return feedCell
-  }
+    feedCell?.dateAndLocationLabel = PostLabel(user: post.userName)
+    feedCell?.messageLabel = PostMessage(message: post.postMessage)
+    feedCell?.profileImageView = PostImages(image: post.userImage, mask: true)
+    feedCell?.postImageView = PostImages(image: post.postImage, mask: true)
+    feedCell?.likesComentsLabel = CommentsLine(likesCount: post.likesCount, commentsCount: post.commentsCount)
+    
+    feedCell?.setupViews()
+    
+    return feedCell!
+}
   
 }
 

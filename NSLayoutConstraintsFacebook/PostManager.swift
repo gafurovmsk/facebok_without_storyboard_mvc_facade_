@@ -25,7 +25,7 @@ class PostManager: NSObject {
                      comments: 695)
     
     let post1 = Post(user: "Steve Jobs",
-                     andUserImage: UIImage(named:"zuckerberg")!,
+                     andUserImage: UIImage(named:"steve")!,
                      postMessage: "some cool steve jobs quote!! ",
                      postImage: UIImage(named:"mountain")!,
                      likes: 3332,
@@ -40,7 +40,7 @@ class PostManager: NSObject {
     
     
     let post3 = Post(user: "Steve Jobs",
-                     andUserImage: UIImage(named:"zuckerberg")!,
+                     andUserImage: UIImage(named:"steve")!,
                      postMessage: "another wisdom steve jobs quote!! ",
                      postImage: UIImage(named:"mountain")!,
                      likes: 3332,

@@ -10,6 +10,7 @@ import UIKit
 
 class PostMessage: UITextView {
   
+  
   init(message: String) {
     
     super.init(frame: CGRect(), textContainer: nil)

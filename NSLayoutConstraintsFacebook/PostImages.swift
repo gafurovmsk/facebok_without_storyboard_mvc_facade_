@@ -10,12 +10,12 @@ import UIKit
 
 class PostImages: UIImageView {
   
-  init(image:String,mask: Bool){
+  init(image:UIImage,mask: Bool){
     
     super.init(frame: CGRect())
     
 
-    super.image = UIImage(named: image)
+    super.image = image
     super.contentMode = .scaleAspectFill
     super.layer.masksToBounds = mask
     

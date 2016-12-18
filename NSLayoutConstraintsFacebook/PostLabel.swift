@@ -10,13 +10,13 @@ import UIKit
 
 class PostLabel: UILabel {
 
-  override init(frame:CGRect) {
+  init(user: String ) {
     
-    super.init(frame: frame)
+    super.init(frame: CGRect())
    
     super.numberOfLines = 2
     
-    let attributedText = NSMutableAttributedString(string: "Mark Zuckerberg", attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 14)])
+    let attributedText = NSMutableAttributedString(string: user, attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 14)])
     
     attributedText.append(NSAttributedString(string: "\nDecember 18  •  San Francisco  •  ", attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 12), NSForegroundColorAttributeName: UIColor.rgb(red:155, green: 161, blue: 171)]))
     // здесь мы вставляем изображение в строку
