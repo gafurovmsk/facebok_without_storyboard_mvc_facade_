@@ -32,7 +32,7 @@ class FacebookFeedCVCell: UICollectionViewCell {
   
   var profileImageView = UIImageView()
   
- // let statusMessage: String
+  // let statusMessage: String
   
   var messageLabel = UITextView()
   
@@ -51,7 +51,7 @@ class FacebookFeedCVCell: UICollectionViewCell {
   }()
   
   
-   override init(frame: CGRect) {
+  override init(frame: CGRect) {
     super.init(frame:frame)
     setupViews()
   }
@@ -73,7 +73,7 @@ class FacebookFeedCVCell: UICollectionViewCell {
     
     button.setTitle(title, for: .normal)
     button.setTitleColor(UIColor.rgb(red: 143, green: 150, blue: 145),for: .normal)
-  //  button.titleLabel?.textAlignment = .left
+    //  button.titleLabel?.textAlignment = .left
     button.setImage(UIImage(named:image), for: .normal)
     button.imageView?.backgroundColor = UIColor.white
     button.imageView?.contentMode = .scaleAspectFit
@@ -81,14 +81,14 @@ class FacebookFeedCVCell: UICollectionViewCell {
     button.imageEdgeInsets = UIEdgeInsetsMake(12,-12,12,24)
     
     button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 13)
-  
+    
     return button
   }
   
   
   
-
-   public func setupViews(){
+  
+  public func setupViews(){
     
     backgroundColor = UIColor.white
     
@@ -103,9 +103,9 @@ class FacebookFeedCVCell: UICollectionViewCell {
     addSubview(shareButton)
     addSubview(commentButton)
     
-//    likeButton.backgroundColor = UIColor.yellow
-//    shareButton.backgroundColor = UIColor.blue
-//    commentButton.backgroundColor = UIColor.cyan
+    //    likeButton.backgroundColor = UIColor.yellow
+    //    shareButton.backgroundColor = UIColor.blue
+    //    commentButton.backgroundColor = UIColor.cyan
     
     
     addContstraints(withVisualFormat: "H:|-8-[v0(44)]-8-[v1]|", views: profileImageView,dateAndLocationLabel)
@@ -127,8 +127,6 @@ class FacebookFeedCVCell: UICollectionViewCell {
 
 // adding extension to UIView
 
-
-
 extension UIView {
   func addContstraints(withVisualFormat format: String, views: UIView...) {
     
@@ -145,10 +143,7 @@ extension UIView {
     
     addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutFormatOptions(), metrics: nil, views: viewsDict))
     
-    
   }
-  
-  
   
 }
 

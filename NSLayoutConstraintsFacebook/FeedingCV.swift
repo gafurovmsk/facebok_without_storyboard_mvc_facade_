@@ -17,41 +17,27 @@ extension FacebookCollectionViewController {
   }
   
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-  let feedCell = collectionView.dequeueReusableCell(withReuseIdentifier: newsCell, for: indexPath) as? FacebookFeedCVCell
+    let feedCell = collectionView.dequeueReusableCell(withReuseIdentifier: newsCell, for: indexPath) as! FacebookFeedCVCell
     
+    feedCell.feedingPost = listOfPosts[indexPath.row]
     
-    // лучше здесь передавать только одну ссылку на объект Post для ячейки
-    // тогда  в didSet можно установить все эти объекты ниже
-    
-    feedCell?.feedingPost = listOfPosts[indexPath.row]
-  
-    
-    // Leaking the mommory  :[
-   // feedCell?.setupViews()
-    
-    return feedCell!
-}
+    return feedCell
+  }
   
 }
 
 
 
 extension FacebookCollectionViewController: UICollectionViewDelegateFlowLayout {
-
-
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
- 
+    
     return CGSize(view.frame.width, 400)
-  
-  
-  
+    
   }
   
-
   
-  
- }
+}
 
 
 
