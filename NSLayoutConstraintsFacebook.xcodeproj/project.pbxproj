@@ -94,6 +94,10 @@
 			isa = PBXGroup;
 			children = (
 				1859BDA01DFAEAE900CB7996 /* FacebookFeedCVCell.swift */,
+				18A6EF3C1DFF266A00151134 /* PostLabel.swift */,
+				18A6EF4A1E00106400151134 /* PostMessage.swift */,
+				18A6EF461E000BFA00151134 /* PostImages.swift */,
+				18A6EF4C1E0014B300151134 /* CommentsLine.swift */,
 				18A6EF421DFFE6F200151134 /* reusableButtons.swift */,
 			);
 			name = View;
@@ -102,10 +106,6 @@
 		18A6EF3A1DFF0B0100151134 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				18A6EF4C1E0014B300151134 /* CommentsLine.swift */,
-				18A6EF461E000BFA00151134 /* PostImages.swift */,
-				18A6EF4A1E00106400151134 /* PostMessage.swift */,
-				18A6EF3C1DFF266A00151134 /* PostLabel.swift */,
 				1859BD901DFAE19100CB7996 /* FacebookCollectionViewController.swift */,
 				1859BDA21DFAED1E00CB7996 /* FeedingCV.swift */,
 			);

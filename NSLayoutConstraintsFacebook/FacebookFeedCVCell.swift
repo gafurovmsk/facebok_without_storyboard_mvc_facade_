@@ -60,10 +60,6 @@ class FacebookFeedCVCell: UICollectionViewCell {
     fatalError("init(coder:) has not been implemented")
   }
   
-  
-  
-  
-  
   // buttons smells
   let likeButton = FacebookFeedCVCell.buttonFor(title: "Like!", andImage: "like")
   
