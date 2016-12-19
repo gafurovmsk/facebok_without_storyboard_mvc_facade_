@@ -16,11 +16,11 @@ class FacebookFeedCVCell: UICollectionViewCell {
   var feedingPost: Post? {
     didSet{
       
-      self.dateAndLocationLabel = PostLabel(user: feedingPost!.userName)
-      self.messageLabel = PostMessage(message: feedingPost!.postMessage)
-      self.profileImageView = PostImages(image: feedingPost!.userImage, mask: true)
-      self.postImageView = PostImages(image: feedingPost!.postImage, mask: true)
-      self.likesComentsLabel = CommentsLine(likesCount: feedingPost!.likesCount, commentsCount: feedingPost!.commentsCount)
+      self.dateAndLocationLabel.resetNew(userName:feedingPost!.userName)
+      self.messageLabel.resetNew(userMessage: feedingPost!.postMessage)
+      self.profileImageView.resetNew(userImage: feedingPost!.userImage)
+      self.postImageView.resetNew(userImage: feedingPost!.postImage)
+      self.likesComentsLabel.resetNew(comments: feedingPost!.commentsCount,likes: feedingPost!.likesCount)
       
     }
     
@@ -28,17 +28,17 @@ class FacebookFeedCVCell: UICollectionViewCell {
     
   }
   
-  var dateAndLocationLabel:UILabel?
+  var dateAndLocationLabel = PostLabel()
   
-  var profileImageView : PostImages?
+  var profileImageView = UIImageView()
   
  // let statusMessage: String
   
-  var messageLabel: UITextView?
+  var messageLabel = UITextView()
   
-  var postImageView: PostImages?
+  var postImageView = UIImageView()
   
-  var likesComentsLabel: CommentsLine?
+  var likesComentsLabel = UILabel()
   
   let deviderLineView: UIView = {
     
@@ -53,7 +53,7 @@ class FacebookFeedCVCell: UICollectionViewCell {
   
    override init(frame: CGRect) {
     super.init(frame:frame)
-   // setupViews()
+    setupViews()
   }
   
   required init?(coder aDecoder: NSCoder) {
@@ -92,11 +92,11 @@ class FacebookFeedCVCell: UICollectionViewCell {
     
     backgroundColor = UIColor.white
     
-    addSubview(dateAndLocationLabel!)
-    addSubview(profileImageView!)
-    addSubview(messageLabel!)
-    addSubview(postImageView!)
-    addSubview(likesComentsLabel!)
+    addSubview(dateAndLocationLabel)
+    addSubview(profileImageView)
+    addSubview(messageLabel)
+    addSubview(postImageView)
+    addSubview(likesComentsLabel)
     addSubview(deviderLineView)
     
     addSubview(likeButton)
@@ -108,16 +108,16 @@ class FacebookFeedCVCell: UICollectionViewCell {
 //    commentButton.backgroundColor = UIColor.cyan
     
     
-    addContstraints(withVisualFormat: "H:|-8-[v0(44)]-8-[v1]|", views: profileImageView!,dateAndLocationLabel!)
-    addContstraints(withVisualFormat: "H:|-4-[v0]-4-|", views: messageLabel!)
-    addContstraints(withVisualFormat: "H:|[v0]|", views: postImageView!)
-    addContstraints(withVisualFormat: "H:|-12-[v0]", views: likesComentsLabel!)
+    addContstraints(withVisualFormat: "H:|-8-[v0(44)]-8-[v1]|", views: profileImageView,dateAndLocationLabel)
+    addContstraints(withVisualFormat: "H:|-4-[v0]-4-|", views: messageLabel)
+    addContstraints(withVisualFormat: "H:|[v0]|", views: postImageView)
+    addContstraints(withVisualFormat: "H:|-12-[v0]", views: likesComentsLabel)
     addContstraints(withVisualFormat: "H:|-8-[v0]-8-|", views: deviderLineView)
     
     addContstraints(withVisualFormat: "H:|[v0(v2)][v1(v2)][v2]|", views: likeButton,commentButton,shareButton)
     
-    addContstraints(withVisualFormat: "V:|-12-[v0]", views: dateAndLocationLabel!)
-    addContstraints(withVisualFormat: "V:|-8-[v0(44)]-4-[v1(24)]-[v2]-4-[v3(24)]-4-[v4(0.4)][v5(50)]|", views: profileImageView!, messageLabel!,postImageView!,likesComentsLabel!,deviderLineView,likeButton)
+    addContstraints(withVisualFormat: "V:|-12-[v0]", views: dateAndLocationLabel)
+    addContstraints(withVisualFormat: "V:|-8-[v0(44)]-4-[v1(24)]-[v2]-4-[v3(24)]-4-[v4(0.4)][v5(50)]|", views: profileImageView, messageLabel,postImageView,likesComentsLabel,deviderLineView,likeButton)
     addContstraints(withVisualFormat: "V:[v0(50)]|", views: commentButton)
     addContstraints(withVisualFormat: "V:[v0(50)]|", views: shareButton)
   }

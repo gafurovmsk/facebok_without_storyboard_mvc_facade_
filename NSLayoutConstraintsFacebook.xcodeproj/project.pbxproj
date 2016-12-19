@@ -20,9 +20,9 @@
 		18A6EF411DFFD52100151134 /* CGExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6EF401DFFD52100151134 /* CGExtensions.swift */; };
 		18A6EF431DFFE6F200151134 /* reusableButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6EF421DFFE6F200151134 /* reusableButtons.swift */; };
 		18A6EF451E00035F00151134 /* PostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6EF441E00035F00151134 /* PostManager.swift */; };
-		18A6EF471E000BFA00151134 /* PostImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6EF461E000BFA00151134 /* PostImages.swift */; };
-		18A6EF4B1E00106400151134 /* PostMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6EF4A1E00106400151134 /* PostMessage.swift */; };
-		18A6EF4D1E0014B300151134 /* CommentsLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6EF4C1E0014B300151134 /* CommentsLine.swift */; };
+		18A6EF471E000BFA00151134 /* ExtensionImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6EF461E000BFA00151134 /* ExtensionImage.swift */; };
+		18A6EF4B1E00106400151134 /* ExtensionMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6EF4A1E00106400151134 /* ExtensionMessage.swift */; };
+		18A6EF4D1E0014B300151134 /* ExtensionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6EF4C1E0014B300151134 /* ExtensionLabel.swift */; };
 		18A6EF511E01130800151134 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6EF501E01130800151134 /* Post.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,9 +42,9 @@
 		18A6EF401DFFD52100151134 /* CGExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGExtensions.swift; sourceTree = "<group>"; };
 		18A6EF421DFFE6F200151134 /* reusableButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = reusableButtons.swift; sourceTree = "<group>"; };
 		18A6EF441E00035F00151134 /* PostManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
-		18A6EF461E000BFA00151134 /* PostImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostImages.swift; sourceTree = "<group>"; };
-		18A6EF4A1E00106400151134 /* PostMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostMessage.swift; sourceTree = "<group>"; };
-		18A6EF4C1E0014B300151134 /* CommentsLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsLine.swift; sourceTree = "<group>"; };
+		18A6EF461E000BFA00151134 /* ExtensionImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionImage.swift; sourceTree = "<group>"; };
+		18A6EF4A1E00106400151134 /* ExtensionMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionMessage.swift; sourceTree = "<group>"; };
+		18A6EF4C1E0014B300151134 /* ExtensionLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionLabel.swift; sourceTree = "<group>"; };
 		18A6EF501E01130800151134 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,9 +95,9 @@
 			children = (
 				1859BDA01DFAEAE900CB7996 /* FacebookFeedCVCell.swift */,
 				18A6EF3C1DFF266A00151134 /* PostLabel.swift */,
-				18A6EF4A1E00106400151134 /* PostMessage.swift */,
-				18A6EF461E000BFA00151134 /* PostImages.swift */,
-				18A6EF4C1E0014B300151134 /* CommentsLine.swift */,
+				18A6EF4A1E00106400151134 /* ExtensionMessage.swift */,
+				18A6EF461E000BFA00151134 /* ExtensionImage.swift */,
+				18A6EF4C1E0014B300151134 /* ExtensionLabel.swift */,
 				18A6EF421DFFE6F200151134 /* reusableButtons.swift */,
 			);
 			name = View;
@@ -212,14 +212,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18A6EF4B1E00106400151134 /* PostMessage.swift in Sources */,
+				18A6EF4B1E00106400151134 /* ExtensionMessage.swift in Sources */,
 				1874F30D1E011DA400680370 /* DataAPI.swift in Sources */,
 				18A6EF3D1DFF266A00151134 /* PostLabel.swift in Sources */,
 				1859BDA11DFAEAE900CB7996 /* FacebookFeedCVCell.swift in Sources */,
-				18A6EF4D1E0014B300151134 /* CommentsLine.swift in Sources */,
+				18A6EF4D1E0014B300151134 /* ExtensionLabel.swift in Sources */,
 				18A6EF511E01130800151134 /* Post.swift in Sources */,
 				18A6EF431DFFE6F200151134 /* reusableButtons.swift in Sources */,
-				18A6EF471E000BFA00151134 /* PostImages.swift in Sources */,
+				18A6EF471E000BFA00151134 /* ExtensionImage.swift in Sources */,
 				1859BDA31DFAED1E00CB7996 /* FeedingCV.swift in Sources */,
 				1859BD911DFAE19100CB7996 /* FacebookCollectionViewController.swift in Sources */,
 				18A6EF3F1DFFD47A00151134 /* UIColorExtenstion.swift in Sources */,

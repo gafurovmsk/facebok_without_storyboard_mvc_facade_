@@ -10,11 +10,20 @@ import UIKit
 
 class PostLabel: UILabel {
 
-  init(user: String ) {
+  init() {
     
     super.init(frame: CGRect())
    
     super.numberOfLines = 2
+  
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
+  
+  func resetNew(userName user: String){
     
     let attributedText = NSMutableAttributedString(string: user, attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 14)])
     
@@ -28,11 +37,9 @@ class PostLabel: UILabel {
     attributedText.append(NSAttributedString(attachment: attachment))
     
     super.attributedText = attributedText
+
     
-  }
-  
-  required init?(coder aDecoder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
+    
   }
   
   

@@ -25,7 +25,9 @@ extension FacebookCollectionViewController {
     
     feedCell?.feedingPost = listOfPosts[indexPath.row]
   
-    feedCell?.setupViews()
+    
+    // Leaking the mommory  :[
+   // feedCell?.setupViews()
     
     return feedCell!
 }
