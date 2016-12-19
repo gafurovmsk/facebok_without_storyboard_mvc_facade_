@@ -13,7 +13,20 @@ class FacebookFeedCVCell: UICollectionViewCell {
   // хотя в принципе вместо отдельного файла мы можем
   // определеить элементы вью в клоужерах
   
-  
+  var feedingPost: Post? {
+    didSet{
+      
+      self.dateAndLocationLabel = PostLabel(user: feedingPost!.userName)
+      self.messageLabel = PostMessage(message: feedingPost!.postMessage)
+      self.profileImageView = PostImages(image: feedingPost!.userImage, mask: true)
+      self.postImageView = PostImages(image: feedingPost!.postImage, mask: true)
+      self.likesComentsLabel = CommentsLine(likesCount: feedingPost!.likesCount, commentsCount: feedingPost!.commentsCount)
+      
+    }
+    
+    
+    
+  }
   
   var dateAndLocationLabel:UILabel?
   
@@ -40,7 +53,7 @@ class FacebookFeedCVCell: UICollectionViewCell {
   
    override init(frame: CGRect) {
     super.init(frame:frame)
- //   setupViews()
+   // setupViews()
   }
   
   required init?(coder aDecoder: NSCoder) {
@@ -79,7 +92,7 @@ class FacebookFeedCVCell: UICollectionViewCell {
   
   
 
-  public func setupViews(){
+   public func setupViews(){
     
     backgroundColor = UIColor.white
     

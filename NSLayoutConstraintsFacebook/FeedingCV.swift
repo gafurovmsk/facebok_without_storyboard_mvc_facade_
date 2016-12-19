@@ -23,14 +23,8 @@ extension FacebookCollectionViewController {
     // лучше здесь передавать только одну ссылку на объект Post для ячейки
     // тогда  в didSet можно установить все эти объекты ниже
     
-    let post = listOfPosts[indexPath.row]
-    
-    feedCell?.dateAndLocationLabel = PostLabel(user: post.userName)
-    feedCell?.messageLabel = PostMessage(message: post.postMessage)
-    feedCell?.profileImageView = PostImages(image: post.userImage, mask: true)
-    feedCell?.postImageView = PostImages(image: post.postImage, mask: true)
-    feedCell?.likesComentsLabel = CommentsLine(likesCount: post.likesCount, commentsCount: post.commentsCount)
-    
+    feedCell?.feedingPost = listOfPosts[indexPath.row]
+  
     feedCell?.setupViews()
     
     return feedCell!
